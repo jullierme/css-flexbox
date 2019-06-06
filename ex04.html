@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href="./default.css" rel="stylesheet" />
+
+    <title>Layout "Santo Graal"</title>
+  </head>
+  <style>
+    /*
+    1) header, 3 colunas, footer
+    2) Colunas de tamanho igual
+    3) Rodapé fixo
+    4) Conteúdo primeiro no HTML
+    5) Marcação mínima
+    */
+
+    body.container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .main {
+      flex: 1;
+    }
+
+    .sidebar,
+    .ads {
+      flex-basis: 100px;
+    }
+
+    @media (min-width: 56.25em) {
+      /* 900px */
+      .content {
+        flex-direction: row;
+      }
+
+      .sidebar {
+        order: -1;
+      }
+    }
+  </style>
+  <body class="container">
+    <header class="header">HEADER</header>
+
+    <div class="content container">
+      <main class="main">CONTENT</main>
+      <aside class="sidebar">SIDEBAR</aside>
+      <aside class="ads">ADS</aside>
+    </div>
+
+    <footer class="footer">FOOTER</footer>
+  </body>
+</html>

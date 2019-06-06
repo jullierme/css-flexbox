@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href="./default.css" rel="stylesheet">
+
+    <title>Centralização vertical</title>
+  </head>
+  <style>
+    .container {
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .box {
+      height: 500px;
+      width: 200px;
+    }
+
+    .box--lvl2 {
+      background-color: rebeccapurple;
+      display: block;
+      height: 100px;
+      width: 100px;
+    }
+
+    .flex-total-centered {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+  <body>
+    <div class="container flex-total-centered">
+      <div class="box flex-total-centered">
+        <div class="box--lvl2"></div>
+      </div>
+    </div>
+  </body>
+</html>
